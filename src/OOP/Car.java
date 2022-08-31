@@ -1,6 +1,7 @@
 package OOP;
 
 import java.security.acl.Owner;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -69,5 +70,16 @@ public class Car {
         return "Марка машины: "+mark+"\n"+"Год выпуска: "+year+"\n"+"Владелец машины: "+owner+"\n";
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return year == car.year && speed == car.speed && engine == car.engine && Objects.equals(mark, car.mark) && Objects.equals(owner, car.owner);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(mark, year, owner, speed, engine);
+    }
 }

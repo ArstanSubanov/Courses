@@ -50,4 +50,7 @@ public enum Element {
                 "Порядковый номер: "+ number +"\n"+
                 "Атомная масса: "+ weight +"\n";
     }
+
+
+
 }
