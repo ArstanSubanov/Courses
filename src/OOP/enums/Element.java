@@ -23,9 +23,9 @@ public enum Element {
     //9 F Фтор (а.м. 18,9984)
     //10 Ne Неон (а.м. 20,179)
 
-    private int number;
-    private String name;
-    private double weight;
+    private final int number;
+    private final String name;
+    private final double weight;
     Element(int number, String name, double weight){
         this.number = number;
         this.name = name;
